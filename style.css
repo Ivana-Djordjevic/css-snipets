@@ -1,0 +1,61 @@
+* {
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+section > p, 
+h1, 
+h2 {
+    color: violet;
+}
+
+h2, 
+p, 
+pre {
+    padding: 10px;
+}
+
+h2 {
+    border: 1px solid;
+    border-radius: 10px;
+    position: relative;
+    top: -43px;
+    background-color: black;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+section {
+    border: 1px dashed;
+    margin: 2rem;
+    width: 300px;
+    position: relative;
+}
+
+
+
+.code-block {
+    background-color: violet;
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    text-align: left;
+}
+
+code {
+    background-color: violet;
+}
+
+h2:hover, 
+section:hover {
+    box-shadow: inset 0px 0px 8px violet, 0 0 15px violet;}
