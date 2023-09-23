@@ -1,11 +1,12 @@
 :root {
- --background-color: black;
+ --background-color: rgb(24, 23, 23);
  --grey: rgb(44, 44, 44);
  --violet: violet;
+ --darkerviolet: rgb(178, 0, 151);
 }
 
 * {
-    background: linear-gradient(var(--background-color), var(--grey));
+    background: var(--background-color);
     color: white;
     box-sizing: border-box;
     text-align: center;
@@ -19,7 +20,6 @@ main {
     user-select: auto;
 }
 
-
 section > p, 
 h1, 
 h2 {
@@ -32,6 +32,10 @@ pre {
     padding: 10px;
 }
 
+p {
+margin: 0px;
+}
+
 h2 {
     border: 1px solid;
     border-radius: 10px;
@@ -41,30 +45,69 @@ h2 {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: -36px;
 }
+
 section {
     border: 1px dashed;
     margin: 2rem;
     width: 25%;
     position: relative;
+    padding: 10px;
 }
 
-
-
 .code-block {
-    background: var(--violet);
+    background: linear-gradient(var(--violet), var(--darkerviolet));
     width: 96%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
     text-align: left;
+    white-space: pre-wrap;
+    overflow: auto;
 }
 
 code {
-    background: var(--violet);
+    background:none;
+}
+
+code::selection {
+    background-color: rgb(37, 101, 238);
+}
+
+code:active {
+    user-select: all;
 }
 
 section:hover, 
 section:hover h2 {
     box-shadow: inset 0px 0px 8px var(--violet), 0 0 15px var(--violet);
 }
+
+section:hover h2 p {
+    transform: translateY(-1opx) scale(1.01);
+}
+
+@media screen and (max-width: 434px) {
+
+    section {
+        flex: 1 0 50%;    
+    }
+    
+    body {
+        margin: 0px;
+    }
+
+}
+
+/* @media screen and (max-width: 762px) {
+
+    section {
+        flex: 0 0 50%;    
+    }
+    
+    body {
+        margin: 0px;
+    }
+
+} */
