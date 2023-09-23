@@ -1,6 +1,5 @@
 :root {
  --background-color: rgb(24, 23, 23);
- --grey: rgb(44, 44, 44);
  --violet: violet;
  --darkerviolet: rgb(178, 0, 151);
 }
@@ -17,7 +16,6 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    user-select: auto;
 }
 
 section > p, 
@@ -82,13 +80,22 @@ code:active {
 section:hover, 
 section:hover h2 {
     box-shadow: inset 0px 0px 8px var(--violet), 0 0 15px var(--violet);
+    transform: translateY(-10px) scale(1.01);
 }
 
-section:hover h2 p {
-    transform: translateY(-1opx) scale(1.01);
+@media screen and (max-width: 762px) {
+
+    section {
+        flex: 0 0 50%;    
+    }
+    
+    body {
+        margin: 0px;
+    }
+
 }
 
-@media screen and (max-width: 434px) {
+@media screen and (max-width: 486px) {
 
     section {
         flex: 1 0 50%;    
@@ -100,14 +107,4 @@ section:hover h2 p {
 
 }
 
-/* @media screen and (max-width: 762px) {
 
-    section {
-        flex: 0 0 50%;    
-    }
-    
-    body {
-        margin: 0px;
-    }
-
-} */
